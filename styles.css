@@ -60,7 +60,7 @@ h1,p{
 }
 body {
 	
-	background: url(lovelettercopy.jpg) no-repeat center center fixed; 
+	background: url(lovelettercopy.jpg) no-repeat center center fixed !important; 
 	margin:auto;	
   -webkit-background-size: cover;
   -moz-background-size: cover;
