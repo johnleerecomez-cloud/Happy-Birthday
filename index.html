@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="galleryphoto.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Qwitcher+Grypen:wght@700&family=Smooch&family=The+Nautigal:wght@700&display=swap" rel="stylesheet"> 
@@ -10,6 +11,13 @@
 <title>HAPPY 30TH BIRTHDAY</title>
 </head>
 <body>
+	<!-- 🎵 Music Button -->
+    <button class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+
+    <!-- 🎵 Audio (use your link here) -->
+    <audio id="bgMusic" loop>
+        <source src="ILOVEYOU.mp3" type="audio/mpeg">
+    </audio>
 	<div class="container">
 		<div id="head">
 			<h1>Happy 30th Birthday <br>My Palangah</h1>
@@ -41,6 +49,24 @@ I love you, and I look forward to continuing this journey with you, hand in hand
 			<P>JOHPICXS</P>
 		</div>
 	</div>
+<script>
+let isPlaying = false;
+
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    const btn = document.querySelector(".music-btn");
+
+    if (isPlaying) {
+        music.pause();
+        btn.innerText = "🎵 Play Music";
+    } else {
+        music.play();
+        btn.innerText = "⏸ Pause Music";
+    }
+
+    isPlaying = !isPlaying;
+}
+</script>
 </body>
 </html> 
 
